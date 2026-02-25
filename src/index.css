@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   BASE
+======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #F5F4EF;
+  --ink: #0E1117;
+  --teal: #0d9488;
+  --teal-light: #ccfbf1;
+  --danger: #ef4444;
+  --orange: #f97316;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* ========================================
+   SUBTLE GRAIN TEXTURE OVERLAY
+======================================== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: #0d9488; border-radius: 10px; }
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   SCAN LINE ANIMATION
+======================================== */
+@keyframes scanLine {
+  0%   { top: 0%;   opacity: 1; }
+  90%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #2dd4bf 30%, #14b8a6 50%, #2dd4bf 70%, transparent 100%);
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.9), 0 0 24px rgba(20, 184, 166, 0.5);
+  animation: scanLine 2.2s linear forwards;
+  pointer-events: none;
+}
+
+/* ========================================
+   HERO BACKGROUND
+======================================== */
+.hero-section {
+  background:
+    radial-gradient(ellipse 70% 50% at 75% 20%, rgba(13, 148, 136, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(13, 148, 136, 0.04) 0%, transparent 55%),
+    linear-gradient(180deg, #F5F4EF 0%, #F8F7F2 100%);
+}
+
+/* ========================================
+   CARD HOVER
+======================================== */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* ========================================
+   ANIMATED UNDERLINE
+======================================== */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0d9488, #14b8a6);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.animated-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ========================================
+   FLOAT BADGES
+======================================== */
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%       { transform: translateY(-10px) rotate(2deg); }
+}
+@keyframes floatBadge2 {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50%       { transform: translateY(-8px) rotate(-1deg); }
+}
+.badge-float-1 { animation: floatBadge  3.5s ease-in-out infinite; }
+.badge-float-2 { animation: floatBadge2 4.2s ease-in-out infinite 0.8s; }
+
+/* ========================================
+   PHONE SCREEN ELEMENTS
+======================================== */
+.hw-line {
+  height: 6px;
+  background: linear-gradient(90deg, #9ca3af, #6b7280, transparent);
+  border-radius: 3px;
+  opacity: 0.55;
+}
+
+/* ========================================
+   ACCORDION
+======================================== */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordion-content.open {
+  max-height: 400px;
+}
+
+/* ========================================
+   PROGRESS BAR (for features)
+======================================== */
+@keyframes progressFill {
+  from { width: 0; }
+}
+.progress-bar {
+  animation: progressFill 1.2s ease-out forwards;
+}
+
+/* ========================================
+   GRADIENT TEXT
+======================================== */
+.gradient-text {
+  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   DARK SECTION
+======================================== */
+.dark-section {
+  background: linear-gradient(135deg, #0E1117 0%, #111827 60%, #0f2027 100%);
+}
+
+/* ========================================
+   INPUT FOCUS RING
+======================================== */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 640px) {
+  .hero-headline {
+    font-size: 2.6rem;
+    line-height: 1.08;
+  }
+}
