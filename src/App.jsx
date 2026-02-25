@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import emailjs from '@emailjs/browser'
 
 /* ============================================================
    INTERSECTION OBSERVER HOOK
@@ -1225,14 +1226,49 @@ function FAQ() {
 /* ============================================================
    SECTION 10 — FINAL CTA
 ============================================================ */
+// ── EmailJS Configuration ──────────────────────────────────
+// Replace these with your actual EmailJS credentials after setup:
+// 1. Sign up at https://www.emailjs.com
+// 2. Add your admin@meddiai.com as an Email Service
+// 3. Create a template with variables: {{to_email}}, {{from_name}}
+// 4. Copy your Service ID, Template ID, and Public Key below
+const EMAILJS_SERVICE_ID = 'service_9bpjhv8'
+const EMAILJS_TEMPLATE_ID = 'template_awjdzzf'
+const EMAILJS_PUBLIC_KEY = 'o1_bZLwvOJ5hmvfyo'
+
 function FinalCTA() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
   const [ref, inView] = useInView()
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (email.trim()) setSubmitted(true)
+    if (!email.trim()) return
+
+    setSending(true)
+    setError('')
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          to_email: email.trim(),
+          email: email.trim(),
+          reply_to: email.trim(),
+          from_name: 'meDDI AI Team',
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+      setSubmitted(true)
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -1280,9 +1316,13 @@ function FinalCTA() {
               />
               <button
                 type="submit"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-7 py-4 rounded-xl font-bold text-sm transition-all shadow-lg shadow-teal-600/25 hover:-translate-y-0.5 whitespace-nowrap"
+                disabled={sending}
+                className={`text-white px-7 py-4 rounded-xl font-bold text-sm transition-all shadow-lg shadow-teal-600/25 whitespace-nowrap ${sending
+                  ? 'bg-teal-400 cursor-not-allowed'
+                  : 'bg-teal-600 hover:bg-teal-700 hover:-translate-y-0.5'
+                  }`}
               >
-                Get Early Access
+                {sending ? 'Sending...' : 'Get Early Access'}
               </button>
             </form>
           ) : (
@@ -1291,6 +1331,9 @@ function FinalCTA() {
               <div className="font-display font-bold text-ink text-xl mb-1">You're on the list!</div>
               <div className="text-gray-500 text-sm">We'll notify you the moment early access opens.</div>
             </div>
+          )}
+          {error && (
+            <p className="text-red-500 text-sm mt-3 font-medium">{error}</p>
           )}
           <p className="text-gray-400 text-xs mt-4">No spam ever. Unsubscribe anytime.</p>
         </div>
