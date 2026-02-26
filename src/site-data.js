@@ -615,7 +615,7 @@ export const contactPage = {
 // Format: https://<your-vercel-project>.vercel.app/api/mailer
 // Or use a custom subdomain: https://api.meddiai.com/api/mailer
 // ─────────────────────────────────────────────────────────────────
-export const mailerEndpoint = 'https://your-vercel-project.vercel.app/api/mailer'
+export const mailerEndpoint = 'https://meddiai.vercel.app/api/mailer'
 
 // ─────────────────────────────────────────────────────────────────
 // PRIVACY POLICY
