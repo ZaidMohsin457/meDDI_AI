@@ -2,10 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      }(window.location))
+    </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d9488'/><path d='M25 50 L40 65 L75 30' stroke='white' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="meDDI AI — Pakistan's first AI-powered prescription safety platform. Reads handwritten prescriptions with 95%+ accuracy and detects drug-drug interactions in real time." />
     <meta name="keywords" content="prescription safety, AI healthcare, drug interaction detection, Pakistan, meDDI AI, OCR, pharmacist tool" />
+    <meta name="theme-color" content="#0d9488" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="meDDI AI" />
+    <meta property="og:title" content="meDDI AI — Prescription Safety, Powered by AI" />
+    <meta property="og:description" content="Pakistan's first AI-powered prescription safety platform. 95%+ accuracy, real-time DDI detection, offline-first Android." />
+    <meta property="og:url" content="https://meddiai.com/" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="meDDI AI — Prescription Safety, Powered by AI" />
+    <meta name="twitter:description" content="Pakistan's first AI-powered prescription safety platform." />
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "meDDI AI",
+      "url": "https://meddiai.com",
+      "description": "Pakistan's first AI-powered prescription safety platform",
+      "email": "admin@meddiai.com",
+      "foundingLocation": "GIK Institute, Topi, Swabi, KPK, Pakistan",
+      "sameAs": []
+    }
+    </script>
     <title>meDDI AI — Prescription Safety, Powered by AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,8 +48,8 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-BtGJSRPx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-z7al_OWY.css">
+    <script type="module" crossorigin src="/assets/index-BZIEMJCB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DXsz2_J9.css">
   </head>
   <body>
     <div id="root"></div>
