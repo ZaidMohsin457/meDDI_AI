@@ -11,9 +11,9 @@ export function PhoneMockup() {
   }, [])
 
   const drugs = [
-    { name: 'Metformin',    dose: '500mg × 2', ok: true  },
-    { name: 'Atorvastatin', dose: '40mg × 1',  ok: true  },
-    { name: 'Aspirin',      dose: '75mg × 1',  ok: false },
+    { name: 'Metformin', dose: '500mg × 2', ok: true },
+    { name: 'Atorvastatin', dose: '40mg × 1', ok: true },
+    { name: 'Aspirin', dose: '75mg × 1', ok: false },
   ]
 
   return (
@@ -63,10 +63,10 @@ export function PhoneMockup() {
               </div>
 
               {/* Corner brackets */}
-              {['top-2 left-2 border-t-2 border-l-2','top-2 right-2 border-t-2 border-r-2',
-                'bottom-2 left-2 border-b-2 border-l-2','bottom-2 right-2 border-b-2 border-r-2'].map((cls, i) => (
-                <div key={i} className={`absolute w-5 h-5 border-teal-500 rounded-sm ${cls}`} />
-              ))}
+              {['top-2 left-2 border-t-2 border-l-2', 'top-2 right-2 border-t-2 border-r-2',
+                'bottom-2 left-2 border-b-2 border-l-2', 'bottom-2 right-2 border-b-2 border-r-2'].map((cls, i) => (
+                  <div key={i} className={`absolute w-5 h-5 border-teal-500 rounded-sm ${cls}`} />
+                ))}
 
               {phase === 'scanning' && (
                 <>
@@ -84,9 +84,9 @@ export function PhoneMockup() {
               )}
 
               <div className="absolute bottom-2 right-2">
-                {phase === 'idle'     && <span className="text-[9px] text-gray-400 font-mono bg-white/80 rounded px-1.5 py-0.5">Ready to scan</span>}
+                {phase === 'idle' && <span className="text-[9px] text-gray-400 font-mono bg-white/80 rounded px-1.5 py-0.5">Ready to scan</span>}
                 {phase === 'scanning' && <span className="text-[9px] text-teal-700 font-mono bg-teal-50/90 rounded px-1.5 py-0.5">Analyzing…</span>}
-                {phase === 'done'     && <span className="text-[9px] text-teal-700 font-mono bg-teal-50/90 rounded px-1.5 py-0.5">Complete ✓</span>}
+                {phase === 'done' && <span className="text-[9px] text-teal-700 font-mono bg-teal-50/90 rounded px-1.5 py-0.5">Complete ✓</span>}
               </div>
             </div>
 
@@ -129,8 +129,8 @@ export function PhoneMockup() {
 
           {/* Bottom tab bar */}
           <div className="border-t border-gray-100 px-4 py-2 flex items-center justify-around shrink-0">
-            {[{s:'⬡',a:true},{s:'◑',a:false},{s:'⊞',a:false},{s:'◉',a:false}].map((t,i)=>(
-              <div key={i} className={`text-sm p-1.5 rounded-lg ${t.a?'text-teal-600 bg-teal-50':'text-gray-300'}`}>{t.s}</div>
+            {[{ s: '⬡', a: true }, { s: '◑', a: false }, { s: '⊞', a: false }, { s: '◉', a: false }].map((t, i) => (
+              <div key={i} className={`text-sm p-1.5 rounded-lg ${t.a ? 'text-teal-600 bg-teal-50' : 'text-gray-300'}`}>{t.s}</div>
             ))}
           </div>
         </div>
@@ -150,7 +150,7 @@ export function PhoneMockup() {
       <div className="badge-float-1 absolute -left-2 top-28 bg-white rounded-2xl shadow-lg border border-teal-100 px-3 py-2 hidden lg:block" style={{ animationDelay: '1.5s' }}>
         <div className="flex items-center gap-1.5">
           <div className="w-1.5 h-1.5 bg-teal-500 rounded-full animate-pulse" />
-          <span className="text-[10px] font-semibold text-gray-700">Offline Ready</span>
+          <span className="text-[10px] font-semibold text-gray-700">Ready</span>
         </div>
       </div>
     </div>

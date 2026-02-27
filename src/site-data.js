@@ -15,7 +15,7 @@ export const company = {
   description:
     "Pakistan's first AI-powered prescription safety platform. Reads handwritten prescriptions with 95%+ accuracy and detects dangerous drug-drug interactions in real time.",
   email: 'admin@meddiai.com',
-  founded: '2024',
+  founded: '2026',
   social: {
     linkedin: '#',
     twitter: '#',
@@ -95,7 +95,7 @@ export const hero = {
   bullets: [
     '95%+ handwriting recognition across diverse Pakistani clinical styles',
     'Real-time DDI screening against 10,000+ known drug-drug interaction pairs',
-    'Fully offline on any mid-range Android — no Wi-Fi needed',
+    'Structured prescription database with complete DDI alert history and dispensing audit trail',
   ],
 }
 
@@ -134,11 +134,11 @@ export const problemSolution = {
       type: 'solution',
       tag: 'The Solution',
       title: 'meDDI AI Changes Everything',
-      body: 'Vision-Language Models fine-tuned specifically for Pakistani clinical handwriting, combined with a real-time DDI engine — delivering 95%+ accuracy with instant safety alerts on any Android device, online or offline.',
+      body: 'Vision-Language Models fine-tuned specifically for Pakistani clinical handwriting, combined with a real-time DDI engine — delivering 95%+ accuracy with instant safety alerts on any Android device.',
       bullets: [
         '95%+ recognition accuracy',
         'Real-time DDI screening',
-        'Works fully offline on Android',
+        // 'Works fully offline on Android',
       ],
     },
   ],
@@ -167,10 +167,10 @@ export const benefits = [
     color: 'teal',
   },
   {
-    tag: 'Reliability',
-    title: 'Works Anywhere in Pakistan',
-    body: 'Built offline-first with TensorFlow Lite on-device inference. meDDI AI works on mid-range Android smartphones — in rural clinics, peri-urban pharmacies, and anywhere connectivity is unreliable.',
-    result: 'Fully operational without internet',
+    tag: 'Records',
+    title: 'Every Prescription, Permanently Logged',
+    body: 'meDDI AI automatically stores every scanned prescription in a structured, searchable database — capturing drug names, dosages, DDI alerts triggered, and pharmacist decisions. A complete, tamper-proof dispensing history from day one.',
+    result: 'Full audit trail for every dispensing event',
     color: 'blue',
   },
 ]
@@ -224,7 +224,7 @@ export const features = [
   {
     id: 'vlm-ocr',
     title: 'Vision-Language Model OCR',
-    body: 'BLIP-2 and LLaVA models fine-tuned on 10,000–15,000 de-identified Pakistani prescriptions for unmatched local accuracy.',
+    body: 'Qwen3-VL model fine-tuned on 10,000–15,000 de-identified Pakistani prescriptions for unmatched local accuracy.',
     icon: 'Eye',
     showOnHome: true,
   },
@@ -243,10 +243,10 @@ export const features = [
     showOnHome: true,
   },
   {
-    id: 'offline',
-    title: 'Offline-First Architecture',
-    body: 'TensorFlow Lite inference runs entirely on-device. No internet required. Works on any mid-range Android smartphone.',
-    icon: 'WifiOff',
+    id: 'audit-trail',
+    title: 'Prescription Audit Trail',
+    body: 'Every prescription processed is automatically logged — drug names, dosages, DDI alerts raised, and pharmacist decisions — creating a searchable, tamper-proof dispensing record.',
+    icon: 'BookOpen',
     showOnHome: true,
   },
   {
@@ -286,33 +286,33 @@ export const testimonials = [
   {
     quote:
       "Finally, I can read every prescription clearly — even when the handwriting is terrible. The DDI alerts have already caught two dangerous combinations this month alone.",
-    name: 'Dr. Fatima Khan',
+    name: '--',
     role: 'Clinical Pharmacist',
-    location: 'Lahore',
+    location: 'Al Raazi Hospital Pharmacy',
     initials: 'FK',
     color: 'teal',
     showOnHome: true,
   },
-  {
-    quote:
-      "As a physician who prescribes dozens of medications daily, meDDI AI gives my patients an extra layer of safety at the pharmacy. It's exactly what Pakistan needs.",
-    name: 'Dr. Ahmed Raza',
-    role: 'General Physician',
-    location: 'Islamabad',
-    initials: 'AR',
-    color: 'blue',
-    showOnHome: true,
-  },
-  {
-    quote:
-      "Our dispensing error rate dropped significantly during the pilot. The offline capability is a game-changer for our peri-urban branch where internet is unreliable.",
-    name: 'Asma Malik',
-    role: 'Head Pharmacist',
-    location: 'Rawalpindi',
-    initials: 'AM',
-    color: 'violet',
-    showOnHome: false,
-  },
+  // {
+  //   quote:
+  //     "As a physician who prescribes dozens of medications daily, meDDI AI gives my patients an extra layer of safety at the pharmacy. It's exactly what Pakistan needs.",
+  //   name: 'Dr. Ahmed Raza',
+  //   role: 'General Physician',
+  //   location: 'Islamabad',
+  //   initials: 'AR',
+  //   color: 'blue',
+  //   showOnHome: true,
+  // },
+  // {
+  //   quote:
+  //     "Our dispensing error rate dropped significantly during the pilot. The offline capability is a game-changer for our peri-urban branch where internet is unreliable.",
+  //   name: 'Asma Malik',
+  //   role: 'Head Pharmacist',
+  //   location: 'Rawalpindi',
+  //   initials: 'AM',
+  //   color: 'violet',
+  //   showOnHome: false,
+  // },
 ]
 
 // ─────────────────────────────────────────────────────────────────
@@ -324,11 +324,11 @@ export const faq = [
     a: "Our Vision-Language Models achieve 95%+ recognition accuracy across Pakistan's diverse clinical handwriting styles, validated on 10,000–15,000 de-identified prescriptions from Lahore, Karachi, Islamabad, Rawalpindi, and Faisalabad.",
     showOnHome: true,
   },
-  {
-    q: 'Does it work without an internet connection?',
-    a: 'Yes — completely. meDDI AI is built offline-first using TensorFlow Lite for on-device inference. All recognition and DDI screening runs entirely on your device, making it viable in rural Pakistan where reliable connectivity is unavailable.',
-    showOnHome: true,
-  },
+  // {
+  //   q: 'Does it work without an internet connection?',
+  //   a: 'Yes — completely. meDDI AI is built offline-first using TensorFlow Lite for on-device inference. All recognition and DDI screening runs entirely on your device, making it viable in rural Pakistan where reliable connectivity is unavailable.',
+  //   showOnHome: true,
+  // },
   {
     q: 'Is patient data private and secure?',
     a: 'Absolutely. AES-256 encryption at rest, TLS 1.3 in transit, OAuth 2.0 authentication, RBAC, and comprehensive audit logs ensure full compliance and accountability.',
@@ -391,15 +391,15 @@ export const about = {
     items: [
       {
         title: 'Vision-Language Models',
-        body: 'We fine-tune BLIP-2 and LLaVA on a corpus of 10,000–15,000 de-identified handwritten prescriptions from across Pakistan, using LoRA fine-tuning, CLAHE preprocessing, and YOLO-based segmentation.',
+        body: 'We fine-tune Qwen3-VL on a corpus of 10,000–15,000 de-identified handwritten prescriptions from across Pakistan, using LoRA fine-tuning, CLAHE preprocessing, and YOLO-based segmentation.',
       },
       {
         title: 'DDI Detection Engine',
         body: 'A hybrid rule-based + ML approach cross-references DrugBank 5.0, RxNorm, and DRAP-registered formularies to screen every prescription against thousands of known drug-drug interaction pairs.',
       },
       {
-        title: 'Offline-First Mobile',
-        body: 'TensorFlow Lite inference runs entirely on-device via a Flutter mobile app, secured with AES-256 encryption and TLS 1.3 — no internet required for core functionality.',
+        title: 'Secure Backend & Dispensing Records',
+        body: 'All processed prescriptions are stored in an encrypted, structured database — drug names, dosages, DDI alerts, and pharmacist decisions — with AES-256 encryption, TLS 1.3, and role-based access control ensuring complete security and accountability.',
       },
     ],
   },
@@ -450,7 +450,7 @@ export const team = {
       email: '',
       initials: 'AF',
       color: 'blue',
-      bio: "Ali works on the Vision-Language Models powering meDDI AI's prescription recognition, focusing on fine-tuning BLIP-2 and LLaVA for Pakistani clinical handwriting. His work directly determines the accuracy of the system's core capability.",
+      bio: "Ali works on the Vision-Language Models powering meDDI AI's prescription recognition, focusing on fine-tuning Qwen3-VL for Pakistani clinical handwriting. His work directly determines the accuracy of the system's core capability.",
       expertise: ['Computer Vision', 'Vision-Language Models', 'Deep Learning', 'AI Research'],
       grants: [],
     },
@@ -469,12 +469,12 @@ export const team = {
       ],
     },
     {
-      name: 'Dr. Usman',
+      name: 'Dr. Usman Zafar',
       role: 'Industrial Collaborator',
       title: 'Medical Superintendent, AL Raazi Hospital',
       institution: 'AL Raazi Hospital, Rawalpindi',
       email: '',
-      initials: 'DU',
+      initials: 'UZ',
       color: 'green',
       bio: "Dr. Usman serves as meDDI AI's primary industrial collaborator, providing direct access to real-world prescription data, clinical workflows, and the operational challenges faced by pharmacy teams. His partnership grounds the product in authentic clinical reality.",
       expertise: ['Clinical Operations', 'Hospital Administration', 'Drug Safety', 'Healthcare Systems'],
@@ -507,8 +507,8 @@ export const caseStudies = {
   },
   studies: [
     {
-      id: 'urban-lahore',
-      tag: 'Urban Pharmacy — Lahore',
+      id: 'Rawalpindi',
+      tag: 'Al Raazi Hospital Pharmacy — Rawalpindi',
       title: 'High-Volume Dispensing, Diverse Handwriting',
       challenge:
         'A busy urban pharmacy in Lahore handles 80–100 prescriptions daily from dozens of different physicians. Handwriting quality varies enormously — from neat printed text to nearly illegible cursive — and bilingual (Urdu/English) prescriptions are the norm.',
@@ -522,47 +522,47 @@ export const caseStudies = {
       ],
       quote: {
         text: "We handle so many prescriptions from so many doctors. meDDI AI catches what we might miss when we're rushed.",
-        author: 'Senior Pharmacist, Lahore Pilot Site',
+        author: 'Senior Pharmacist, Al Raazi Hospital Pharmacy',
       },
     },
-    {
-      id: 'periurban-rawalpindi',
-      tag: 'Peri-Urban Pharmacy — Rawalpindi',
-      title: 'Connectivity Challenges, Offline-First Success',
-      challenge:
-        'A peri-urban pharmacy operating on the outskirts of Rawalpindi faced inconsistent internet connectivity — meaning cloud-based OCR solutions were not viable. Manual reading of prescriptions led to an estimated 8–10% error rate.',
-      solution:
-        "meDDI AI's offline-first TensorFlow Lite deployment ran entirely on a mid-range Android device. Zero internet required. The pharmacist could read and verify every prescription in under 3 seconds, even during full connectivity outages.",
-      results: [
-        { metric: '0%', label: 'Downtime due to connectivity' },
-        { metric: '96.1%', label: 'Offline recognition accuracy' },
-        { metric: '~8%', label: 'Estimated reduction in dispensing errors' },
-        { metric: '<3s', label: 'Average per-prescription processing time' },
-      ],
-      quote: {
-        text: "We have no reliable internet here. Knowing this works completely offline made all the difference.",
-        author: 'Pharmacist, Rawalpindi Peri-Urban Site',
-      },
-    },
-    {
-      id: 'rural-swabi',
-      tag: 'Rural Clinic — Swabi',
-      title: 'Resource-Constrained, Maximum Safety Impact',
-      challenge:
-        'A rural health clinic in Swabi serves a mixed urban-rural population, with a single pharmacist managing all dispensing. Prescriptions from local practitioners often include Urdu-transliterated drug names and non-standard abbreviations unfamiliar to standard OCR tools.',
-      solution:
-        "meDDI AI's bilingual VLM — trained specifically on Pakistan's regional prescribing patterns — handled the Urdu-English mixed content seamlessly. The pharmacist received DDI alerts for 3 combinations, all of which were subsequently reviewed and modified by the prescribing physician.",
-      results: [
-        { metric: '3', label: 'DDI alerts leading to prescription change' },
-        { metric: '91.4%', label: 'Accuracy on Urdu-English mixed content' },
-        { metric: '100%', label: 'Alert follow-up rate by physicians' },
-        { metric: '1 device', label: 'Mid-range Android, no infrastructure cost' },
-      ],
-      quote: {
-        text: "Three times, the doctor changed the prescription based on the alert. Three patients were protected from potential harm.",
-        author: 'Clinic Administrator, Swabi Rural Site',
-      },
-    },
+    // {
+    //   id: 'periurban-rawalpindi',
+    //   tag: 'Peri-Urban Pharmacy — Rawalpindi',
+    //   title: 'Connectivity Challenges, Offline-First Success',
+    //   challenge:
+    //     'A peri-urban pharmacy operating on the outskirts of Rawalpindi faced inconsistent internet connectivity — meaning cloud-based OCR solutions were not viable. Manual reading of prescriptions led to an estimated 8–10% error rate.',
+    //   solution:
+    //     "meDDI AI's offline-first TensorFlow Lite deployment ran entirely on a mid-range Android device. Zero internet required. The pharmacist could read and verify every prescription in under 3 seconds, even during full connectivity outages.",
+    //   results: [
+    //     { metric: '0%', label: 'Downtime due to connectivity' },
+    //     { metric: '96.1%', label: 'Offline recognition accuracy' },
+    //     { metric: '~8%', label: 'Estimated reduction in dispensing errors' },
+    //     { metric: '<3s', label: 'Average per-prescription processing time' },
+    //   ],
+    //   quote: {
+    //     text: "We have no reliable internet here. Knowing this works completely offline made all the difference.",
+    //     author: 'Pharmacist, Rawalpindi Peri-Urban Site',
+    //   },
+    // },
+    // {
+    //   id: 'rural-swabi',
+    //   tag: 'Rural Clinic — Swabi',
+    //   title: 'Resource-Constrained, Maximum Safety Impact',
+    //   challenge:
+    //     'A rural health clinic in Swabi serves a mixed urban-rural population, with a single pharmacist managing all dispensing. Prescriptions from local practitioners often include Urdu-transliterated drug names and non-standard abbreviations unfamiliar to standard OCR tools.',
+    //   solution:
+    //     "meDDI AI's bilingual VLM — trained specifically on Pakistan's regional prescribing patterns — handled the Urdu-English mixed content seamlessly. The pharmacist received DDI alerts for 3 combinations, all of which were subsequently reviewed and modified by the prescribing physician.",
+    //   results: [
+    //     { metric: '3', label: 'DDI alerts leading to prescription change' },
+    //     { metric: '91.4%', label: 'Accuracy on Urdu-English mixed content' },
+    //     { metric: '100%', label: 'Alert follow-up rate by physicians' },
+    //     { metric: '1 device', label: 'Mid-range Android, no infrastructure cost' },
+    //   ],
+    //   quote: {
+    //     text: "Three times, the doctor changed the prescription based on the alert. Three patients were protected from potential harm.",
+    //     author: 'Clinic Administrator, Swabi Rural Site',
+    //   },
+    // },
   ],
   riskSection: {
     headline: 'The Cost of Doing Nothing',

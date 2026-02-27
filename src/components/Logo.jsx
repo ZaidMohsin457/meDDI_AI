@@ -15,10 +15,7 @@ export function Logo({ dark = false, linkTo = '/' }) {
           dark ? 'text-white' : 'text-ink'
         }`}
       >
-        me<span className="text-teal-500">DDI</span>{' '}
-        <span className={`font-mono font-semibold text-sm ${dark ? 'text-teal-400' : 'text-teal-500'}`}>
-          AI
-        </span>
+        me<span className="text-teal-500">DDI</span><sup className={`font-mono font-bold text-[10px] tracking-wider ml-0.5 -top-2 ${dark ? 'text-teal-400' : 'text-teal-500'}`}>AI</sup>
       </span>
     </Link>
   )
