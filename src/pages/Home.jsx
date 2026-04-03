@@ -411,7 +411,7 @@ function Features() {
             </h2>
           </div>
           <Link to="/about#features" className="inline-flex items-center gap-1.5 text-teal-600 font-semibold text-sm hover:text-teal-700 transition-colors shrink-0">
-            View all 8 features <Icons.ChevronRight cls="w-4 h-4" />
+            View all features <Icons.ChevronRight cls="w-4 h-4" />
           </Link>
         </div>
 

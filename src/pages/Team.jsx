@@ -97,6 +97,10 @@ export default function Team() {
   useSEO(seo.team)
   const { hero, members } = team
 
+  const founders = members.filter(m => m.group === 'founder')
+  const core = members.filter(m => m.group === 'core')
+  const advisors = members.filter(m => m.group === 'advisor')
+
   return (
     <main>
       {/* Hero */}
@@ -119,23 +123,38 @@ export default function Team() {
       {/* Team grid */}
       <section className="py-16 px-6 bg-white" aria-label="Team members">
         <div className="max-w-7xl mx-auto">
+
           {/* Founding Team */}
           <FadeUp className="mb-8">
             <h2 className="font-display font-bold text-ink text-lg mb-1">Founding Team</h2>
-            <p className="text-gray-400 text-sm">GIK Institute of Engineering Sciences and Technology</p>
+            <p className="text-gray-400 text-sm">GIK Institute of Engineering Sciences and Technology · NIC Islamabad Cohort 5</p>
           </FadeUp>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-            {members.slice(0, 3).map((m, i) => <TeamCard key={m.name} member={m} index={i} />)}
+            {founders.map((m, i) => <TeamCard key={m.name} member={m} index={i} />)}
           </div>
+
+          {/* Core Team */}
+          {core.length > 0 && (
+            <>
+              <FadeUp className="mb-8">
+                <h2 className="font-display font-bold text-ink text-lg mb-1">Core Team</h2>
+                <p className="text-gray-400 text-sm">Engineers driving the AI and ML capabilities</p>
+              </FadeUp>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+                {core.map((m, i) => <TeamCard key={m.name} member={m} index={i} />)}
+              </div>
+            </>
+          )}
 
           {/* Advisors & Partners */}
           <FadeUp className="mb-8">
             <h2 className="font-display font-bold text-ink text-lg mb-1">Advisors & Partners</h2>
-            <p className="text-gray-400 text-sm">Providing supervision, clinical access, and commercialization expertise</p>
+            <p className="text-gray-400 text-sm">Providing technical depth, hospital access, and clinical domain expertise</p>
           </FadeUp>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {members.slice(3).map((m, i) => <TeamCard key={m.name} member={m} index={i} />)}
+          <div className="grid md:grid-cols-2 gap-6">
+            {advisors.map((m, i) => <TeamCard key={m.name} member={m} index={i} />)}
           </div>
+
         </div>
       </section>
 
@@ -146,9 +165,9 @@ export default function Team() {
             <div className="bg-white rounded-3xl border border-gray-100 p-8 md:p-10 shadow-sm">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 {[
-                  { value: '3', label: 'Student Founders building the product', icon: <Icons.Users cls="w-6 h-6" /> },
-                  { value: '95%+', label: 'Prescription recognition accuracy achieved', icon: <Icons.Star cls="w-6 h-6" /> },
-                  { value: '2+', label: 'Industry & hospital partnerships', icon: <Icons.BookOpen cls="w-6 h-6" /> },
+                  { value: '4', label: 'Engineers & founders building the product', icon: <Icons.Users cls="w-6 h-6" /> },
+                  { value: '5 IEEE', label: 'Published research papers (CTO)', icon: <Icons.Star cls="w-6 h-6" /> },
+                  { value: '2+', label: 'Hospital & industry partnerships', icon: <Icons.BookOpen cls="w-6 h-6" /> },
                 ].map((s, i) => (
                   <div key={i}>
                     <div className="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-3">
@@ -166,7 +185,7 @@ export default function Team() {
 
       <CTABanner
         headline="Work With Our Team"
-        subheadline="Interested in piloting meDDI AI at your pharmacy or hospital, or partnering with us?"
+        subheadline="Interested in piloting meDDI AI at your hospital, or partnering with us on pharma analytics?"
         primaryCta={{ label: 'Get in Touch', href: '/contact' }}
       />
     </main>

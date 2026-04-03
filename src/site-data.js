@@ -13,7 +13,7 @@ export const company = {
   legalName: 'meDDI AI',
   tagline: 'Prescription Safety, Powered by AI',
   description:
-    "Pakistan's first AI-powered prescription safety platform. Reads handwritten prescriptions with 95%+ accuracy and detects dangerous drug-drug interactions in real time.",
+    "Pakistan's first AI-powered prescription safety platform. Reads handwritten prescriptions and detects dangerous drug-drug interactions — outperforming standard OCR tools by a significant margin.",
   email: 'admin@meddiai.com',
   founded: '2026',
   social: {
@@ -30,7 +30,7 @@ export const seo = {
   home: {
     title: 'meDDI AI — Prescription Safety, Powered by AI',
     description:
-      "Pakistan's first AI-powered prescription safety platform. Reads handwritten prescriptions with 95%+ accuracy and detects dangerous drug-drug interactions in real time.",
+      "Pakistan's first AI-driven prescription safety platform — reducing medication errors through Vision-Language Models and real-time drug interaction detection.",
     canonical: 'https://meddiai.com/',
   },
   about: {
@@ -89,11 +89,11 @@ export const hero = {
   badge: "Pakistan's First AI Prescription Safety Platform",
   headline: 'Turn Every Prescription Into a Safety Net',
   subheadline:
-    'meDDI AI uses advanced Vision-Language Models to instantly read handwritten prescriptions with 95%+ accuracy and detect dangerous drug-drug interactions in real time.',
+    'meDDI AI uses advanced Vision-Language Models to read handwritten prescriptions and detect dangerous drug-drug interactions — purpose-built for Pakistan\'s clinical environment.',
   cta: { label: 'Request Demo', href: '/contact' },
   secondaryCta: { label: 'See how it works', href: '#how-it-works' },
   bullets: [
-    '95%+ handwriting recognition across diverse Pakistani clinical styles',
+    'Advanced handwriting recognition trained on Pakistan\'s diverse clinical scripts — far exceeding standard OCR tools',
     'Real-time DDI screening against 10,000+ known drug-drug interaction pairs',
     'Structured prescription database with complete DDI alert history and dispensing audit trail',
   ],
@@ -103,10 +103,10 @@ export const hero = {
 // HOME — STATS BAR
 // ─────────────────────────────────────────────────────────────────
 export const stats = [
-  { value: '10,000+', label: 'Prescriptions in Training Dataset' },
-  { value: '95%+', label: 'Recognition Accuracy' },
-  { value: '<500ms', label: 'DDI Detection Speed' },
-  { value: '18 Mo', label: 'R&D Timeline' },
+  { value: '22.3%', label: 'Outpatient Rxs Contain a DDI' },
+  { value: '10,000+', label: 'Curated DDI Interaction Pairs' },
+  { value: '94.8%', label: 'Peak Pilot Recognition Accuracy' },
+  { value: '500K+', label: 'Preventable Deaths Annually in Pakistan' },
 ]
 
 // ─────────────────────────────────────────────────────────────────
@@ -122,21 +122,22 @@ export const problemSolution = {
       type: 'problem',
       tag: 'Problem',
       title: 'The Daily Crisis',
-      body: '1 in 10 patients globally experience a medication error. In Pakistan, handwritten prescriptions — bilingual, heavily abbreviated, and often illegible — are dispensed dozens of times per pharmacist every day. Existing OCR tools achieve only 65–70% accuracy with zero clinical context.',
+      body: '80,000+ prescription errors were reported in a single year across leading hospitals in Islamabad, Lahore, and Karachi. 22.3% of outpatient prescriptions in Pakistan contain a dangerous drug-drug interaction — yet only 1.2% of doctors are aware. Existing OCR tools achieve only 65–70% accuracy with zero clinical context.',
       bullets: [
-        'Illegible handwriting causing dosage errors',
-        'English-Urdu bilingual complexity',
-        'No real-time DDI detection at dispensing',
+        'Illegible handwriting causing dosage and dispensing errors',
+        'English-Urdu bilingual complexity defeating standard OCR',
+        'No DDI detection at the point of dispensing',
+        '500K+ preventable deaths annually in Pakistan',
       ],
-      stat: { value: '65–70%', label: 'Current OCR accuracy — with no DDI check' },
+      stat: { value: '22.3%', label: 'of outpatient prescriptions contain a DDI' },
     },
     {
       type: 'solution',
       tag: 'The Solution',
       title: 'meDDI AI Changes Everything',
-      body: 'Vision-Language Models fine-tuned specifically for Pakistani clinical handwriting, combined with a real-time DDI engine — delivering 95%+ accuracy with instant safety alerts on any Android device.',
+      body: 'Vision-Language Models fine-tuned specifically for Pakistani clinical handwriting, combined with a real-time DDI engine — delivering significantly higher accuracy than standard OCR tools, with instant safety alerts on any Android device.',
       bullets: [
-        '95%+ recognition accuracy',
+        'High recognition accuracy on Pakistani clinical handwriting',
         'Real-time DDI screening',
         // 'Works fully offline on Android',
       ],
@@ -155,7 +156,7 @@ export const benefits = [
   {
     tag: 'Speed',
     title: 'Minutes Saved, Every Prescription',
-    body: 'A pharmacist spends ~4 minutes deciphering a hard-to-read prescription. meDDI AI reads it in under half a second — giving back hours each day for patient care.',
+    body: 'A pharmacist spends ~4 minutes deciphering a hard-to-read prescription. meDDI AI reads and digitizes it in seconds — giving back hours each day for patient care.',
     result: 'Save 4+ minutes per prescription',
     color: 'amber',
   },
@@ -182,12 +183,12 @@ export const demoVideo = {
   sectionLabel: 'Product Demo',
   headline: 'See meDDI AI in Action',
   subheadline:
-    'Watch how meDDI AI reads a handwritten prescription and detects drug interactions in under 30 seconds.',
-  youtubeId: '', // Replace with YouTube video ID when your demo is ready, e.g. 'dQw4w9WgXcQ'
+    'Watch how meDDI AI reads a handwritten prescription and flags drug interactions in seconds.',
+  youtubeId: '', // Replace with your YouTube video ID, e.g. 'dQw4w9WgXcQ'
   placeholder: {
     title: 'Demo Video Coming Soon',
     description:
-      'We are currently recording our product demo. In the meantime, request a live demo with our team.',
+      'We are currently finalizing our product demo video. In the meantime, request a live walkthrough with our team.',
     cta: { label: 'Request Live Demo', href: '/contact' },
   },
 }
@@ -207,7 +208,7 @@ export const howItWorks = {
     {
       number: '02',
       title: 'AI Reads & Digitizes',
-      body: 'Our Vision-Language Model analyzes the prescription — reading handwriting, identifying drug names, dosages, and frequencies in under 500 milliseconds.',
+      body: 'Our Vision-Language Model analyzes the prescription — reading handwriting, identifying drug names, dosages, and frequencies in approximately 4 seconds.',
     },
     {
       number: '03',
@@ -233,7 +234,7 @@ export const features = [
     title: 'Bilingual Support',
     body: 'Handles English and Urdu prescriptions — including mixed-language content and regional abbreviations prevalent in Pakistani clinical practice.',
     icon: 'Globe',
-    showOnHome: true,
+    showOnHome: false,
   },
   {
     id: 'ddi',
@@ -272,9 +273,23 @@ export const features = [
   },
   {
     id: 'analytics',
-    title: 'Analytics Dashboard',
-    body: 'Pharmacy managers get insights on dispensing patterns, DDI alert frequencies, and error trends to improve safety protocols.',
+    title: 'Hospital Analytics Dashboard',
+    body: 'Hospital administrators get insights on prescribing patterns, DDI alert frequencies, formulary optimization opportunities, and dispensing trends across departments.',
     icon: 'Chart',
+    showOnHome: false,
+  },
+  {
+    id: 'pharma-b2b',
+    title: 'Pharma B2B Intelligence',
+    body: 'Market intelligence layer for pharmaceutical companies: track product mentions, prescribing doctor reach, and regional coverage — all DRAP-compliant and privacy-preserving. Comparable to IQVIA at a fraction of the cost.',
+    icon: 'TrendingUp',
+    showOnHome: true,
+  },
+  {
+    id: 'prescription-analytics',
+    title: 'Prescription Analytics',
+    body: 'Institutional dashboards showing prescribing patterns by physician, department, and region. Enables formulary optimization and evidence-based clinical governance for hospital administrators.',
+    icon: 'BookOpen',
     showOnHome: false,
   },
 ]
@@ -321,7 +336,7 @@ export const testimonials = [
 export const faq = [
   {
     q: "How accurate is meDDI AI's prescription recognition?",
-    a: "Our Vision-Language Models achieve 95%+ recognition accuracy across Pakistan's diverse clinical handwriting styles, validated on 10,000–15,000 de-identified prescriptions from Lahore, Karachi, Islamabad, Rawalpindi, and Faisalabad.",
+    a: "In our Al Raazi Hospital pilot, meDDI AI achieved 94.8% recognition accuracy on real-world handwritten prescriptions. Our models are fine-tuned on 10,000+ de-identified Pakistani prescriptions across diverse handwriting styles — and accuracy improves continuously as fine-tuning progresses.",
     showOnHome: true,
   },
   // {
@@ -412,84 +427,90 @@ export const about = {
 export const team = {
   hero: {
     tag: 'The Team',
-    headline: 'Built by Founders, Guided by Experts',
+    headline: 'Domain Meets Technology',
     subheadline:
-      'meDDI AI is a Final Year Project turned startup — built by a team of developers and AI researchers, with guidance from an experienced supervisor, a hospital industry partner, and a commercialization advisor.',
+      'meDDI AI is built by founders and engineers with deep roots in AI research and healthcare — backed by advisors who bring hospital access, industry experience, and regulatory expertise.',
   },
   members: [
     // ── Founding Team ──────────────────────────────
     {
+      name: 'Dr. Ahmar Rashid',
+      role: 'Founder & CEO',
+      title: 'Full Professor & former Dean, GIK Institute',
+      institution: 'GIK Institute of Engineering Sciences and Technology',
+      email: 'ahmar.rashid@giki.edu.pk',
+      initials: 'AR',
+      color: 'orange',
+      group: 'founder',
+      bio: 'Dr. Ahmar Rashid is a Full Professor and former Dean at GIK Institute with 20+ years in AI/ML research. A Meta AI Master Trainer, he has led funded AI medical diagnostics research and brings deep technical authority and institutional credibility to meDDI AI.',
+      expertise: ['AI / ML Research', 'Healthcare AI', 'Meta AI Master Trainer', 'Research Leadership'],
+      grants: [],
+    },
+    {
       name: 'Muhammad Zaid Mohsin',
-      role: 'Co-founder · Full Stack Developer',
+      role: 'Co-Founder & CTO',
       title: 'BS Computer Science, GIK Institute',
       institution: 'GIK Institute of Engineering Sciences and Technology',
       email: '',
       initials: 'ZM',
       color: 'teal',
-      bio: 'Zaid is the lead Full Stack Developer of meDDI AI, responsible for the web platform, backend APIs, and system integration. He brings together the AI models, the drug database, and the pharmacy-facing product into one cohesive system.',
-      expertise: ['Full Stack Development', 'React', 'Node.js', 'System Architecture'],
+      group: 'founder',
+      bio: "Zaid architected meDDI AI's full AI/ML backend stack. He has published 5 IEEE papers and delivered a 5× inference latency gain using vLLM and INT8 quantization. He has research experience at the University of Europe and works across FastAPI and QLoRA fine-tuning pipelines.",
+      expertise: ['AI/ML Backend', 'FastAPI', 'vLLM · QLoRA', '5 IEEE Papers'],
       grants: [],
     },
     {
       name: 'Haider Ali Khan',
-      role: 'Co-founder · AI Researcher',
+      role: 'Co-Founder & Product Lead',
       title: 'BS Computer Science, GIK Institute',
       institution: 'GIK Institute of Engineering Sciences and Technology',
       email: '',
       initials: 'HAK',
       color: 'violet',
-      bio: "Haider leads the development of meDDI AI's DDI detection engine and contributes to NLP-based drug name extraction. He is responsible for building and maintaining the Pakistan-specific drug interaction database that powers real-time safety alerts.",
-      expertise: ['NLP', 'Drug Interaction Detection', 'Machine Learning', 'AI Research'],
+      group: 'founder',
+      bio: "Haider leads meDDI AI's mobile app architecture and UX design. He owns the doctor- and pharmacist-facing product roadmap and has driven the end-to-end meDDI app development lifecycle — from wireframe to production.",
+      expertise: ['Mobile Architecture', 'UX Design', 'Product Strategy', 'Flutter'],
       grants: [],
     },
+    // ── Core Team ──────────────────────────────────
     {
       name: 'Ali Faisal',
-      role: 'Co-founder · AI Researcher',
+      role: 'Lead AI Engineer',
       title: 'BS Computer Science, GIK Institute',
       institution: 'GIK Institute of Engineering Sciences and Technology',
       email: '',
       initials: 'AF',
       color: 'blue',
-      bio: "Ali works on the Vision-Language Models powering meDDI AI's prescription recognition, focusing on fine-tuning Qwen3-VL for Pakistani clinical handwriting. His work directly determines the accuracy of the system's core capability.",
-      expertise: ['Computer Vision', 'Vision-Language Models', 'Deep Learning', 'AI Research'],
+      group: 'core',
+      bio: "Ali leads meDDI AI's fine-tuning pipelines and data annotation workflows. He drives ML model training for OCR and DDI detection, and handles healthcare AI dataset curation and labeling — directly shaping the accuracy of the system's core capabilities.",
+      expertise: ['Fine-tuning Pipelines', 'Data Annotation', 'OCR · DDI Models', 'Dataset Curation'],
       grants: [],
     },
-    // ── Advisor & Partners ─────────────────────────
+    // ── Advisors & Partners ────────────────────────
     {
-      name: 'Dr. Ahmar Rashid',
-      role: 'Project Supervisor',
-      title: 'Professor, Faculty of Computer Sciences and Engineering',
-      institution: 'GIK Institute',
-      email: 'ahmar.rashid@giki.edu.pk',
-      initials: 'AR',
-      color: 'orange',
-      bio: 'Dr. Ahmar Rashid is a Full Professor at GIK Institute with deep expertise in computer vision and applied AI systems. He supervises the meDDI AI project, providing technical guidance, research direction, and institutional support.',
-      expertise: ['Computer Vision', 'Applied AI', 'Research Leadership', 'Healthcare AI'],
-      grants: [
-      ],
-    },
-    {
-      name: 'Dr. Usman Zafar',
-      role: 'Industrial Collaborator',
-      title: 'Medical Superintendent, AL Raazi Hospital',
-      institution: 'AL Raazi Hospital, Rawalpindi',
-      email: '',
-      initials: 'UZ',
-      color: 'green',
-      bio: "Dr. Usman serves as meDDI AI's primary industrial collaborator, providing direct access to real-world prescription data, clinical workflows, and the operational challenges faced by pharmacy teams. His partnership grounds the product in authentic clinical reality.",
-      expertise: ['Clinical Operations', 'Hospital Administration', 'Drug Safety', 'Healthcare Systems'],
-      grants: [],
-    },
-    {
-      name: 'Mohsin Zafar',
-      role: 'Commercialization Advisor',
-      title: 'Startup Advisor & Entrepreneur',
+      name: 'M. Mohsin Zafar',
+      role: 'Technical Advisor',
+      title: 'Sr. Software Engineer · PIEAS MS CS, NUST BE',
       institution: 'Independent',
       email: '',
       initials: 'MZ',
       color: 'amber',
-      bio: 'Mohsin Zafar brings hands-on experience in launching and commercializing technology startups in Pakistan. He advises meDDI AI on go-to-market strategy, investor relations, business development, and navigating the healthcare market.',
-      expertise: ['Startup Strategy', 'Go-to-Market', 'Business Development', 'Commercialization'],
+      group: 'advisor',
+      bio: 'Mohsin is a senior software engineer who led a 200K+ users/month SaaS platform (UltraCodes). A CV & 3D ML researcher and ex-Lecturer at GIKI, he advises meDDI AI on technical architecture, scalability, and product commercialization.',
+      expertise: ['SaaS Architecture', 'CV & 3D ML', 'Scalability', 'Tech Commercialization'],
+      grants: [],
+    },
+    {
+      name: 'Dr. Usman Zafar',
+      role: 'Data & Domain Partner',
+      title: 'Medical Superintendent · Assoc. Prof. of Medicine',
+      institution: 'Secondary-care Hospital, Pakistan',
+      email: '',
+      initials: 'UZ',
+      color: 'green',
+      group: 'advisor',
+      bio: "Dr. Usman is the Medical Superintendent of a secondary-care hospital and an Associate Professor of Medicine. As Vice Chairman of Alkhidmat, he brings deep expertise in pharmacotherapy and clinical patient safety — grounding meDDI AI in authentic clinical reality.",
+      expertise: ['Clinical Patient Safety', 'Pharmacotherapy', 'Hospital Operations', 'Medical Research'],
       grants: [],
     },
   ],
@@ -682,7 +703,7 @@ export const termsOfService = {
     },
     {
       title: '5. Accuracy',
-      body: 'While meDDI AI achieves 95%+ recognition accuracy in controlled trials, no AI system is infallible. Users must apply professional judgement and verify all outputs before acting on them. We continually work to improve accuracy but do not warrant error-free performance.',
+      body: 'While meDDI AI achieves high recognition accuracy in pilot testing, no AI system is infallible. Users must apply professional judgement and verify all outputs before acting on them. We continually work to improve accuracy but do not warrant error-free performance.',
     },
     {
       title: '6. Intellectual Property',
