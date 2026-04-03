@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useSEO } from '../hooks/useSEO'
 import { useInView } from '../hooks/useInView'
 import { CTABanner } from '../components/CTABanner'
@@ -25,6 +26,7 @@ const colorClasses = {
 
 function TeamCard({ member, index }) {
   const [ref, inView] = useInView(0.1)
+  const [imgError, setImgError] = useState(false)
   const c = colorClasses[member.color] || colorClasses.teal
 
   return (
@@ -36,8 +38,19 @@ function TeamCard({ member, index }) {
     >
       {/* Avatar */}
       <div className="flex items-start gap-5 mb-6">
-        <div className={`w-16 h-16 ${c.avatar} rounded-2xl flex items-center justify-center text-white font-display font-bold text-xl shrink-0 shadow-md`}>
-          {member.initials}
+        <div className="shrink-0">
+          {member.photo && !imgError ? (
+            <img
+              src={member.photo}
+              alt={member.name}
+              onError={() => setImgError(true)}
+              className="w-16 h-16 rounded-2xl object-cover shadow-md"
+            />
+          ) : (
+            <div className={`w-16 h-16 ${c.avatar} rounded-2xl flex items-center justify-center text-white font-display font-bold text-xl shadow-md`}>
+              {member.initials}
+            </div>
+          )}
         </div>
         <div>
           <h3 className="font-display font-bold text-ink text-lg leading-tight">{member.name}</h3>
@@ -47,10 +60,10 @@ function TeamCard({ member, index }) {
       </div>
 
       {/* Institution */}
-      <div className="flex items-center gap-2 mb-4 pb-4 border-b border-gray-100">
+      {/* <div className="flex items-center gap-2 mb-4 pb-4 border-b border-gray-100">
         <Icons.MapPin cls="w-4 h-4 text-gray-400 shrink-0" />
         <span className="text-gray-500 text-xs">{member.institution}</span>
-      </div>
+      </div> */}
 
       {/* Bio */}
       <p className="text-gray-600 text-sm leading-relaxed mb-5">{member.bio}</p>
@@ -163,11 +176,10 @@ export default function Team() {
         <div className="max-w-4xl mx-auto">
           <FadeUp>
             <div className="bg-white rounded-3xl border border-gray-100 p-8 md:p-10 shadow-sm">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="grid md:grid-cols-2 gap-6 text-center">
                 {[
                   { value: '4', label: 'Engineers & founders building the product', icon: <Icons.Users cls="w-6 h-6" /> },
-                  { value: '5 IEEE', label: 'Published research papers (CTO)', icon: <Icons.Star cls="w-6 h-6" /> },
-                  { value: '2+', label: 'Hospital & industry partnerships', icon: <Icons.BookOpen cls="w-6 h-6" /> },
+                  { value: '2', label: 'Hospital & industry partnerships', icon: <Icons.BookOpen cls="w-6 h-6" /> },
                 ].map((s, i) => (
                   <div key={i}>
                     <div className="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mx-auto mb-3">
