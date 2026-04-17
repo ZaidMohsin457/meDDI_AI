@@ -11,6 +11,7 @@ import CaseStudies from './pages/CaseStudies'
 import Contact     from './pages/Contact'
 import Privacy     from './pages/Privacy'
 import Terms       from './pages/Terms'
+import Download    from './pages/Download'
 
 // 404
 function NotFound() {
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="/contact"      element={<Contact />}     />
             <Route path="/privacy"      element={<Privacy />}     />
             <Route path="/terms"        element={<Terms />}       />
+            <Route path="/download"     element={<Download />}    />
             <Route path="*"             element={<NotFound />}    />
           </Routes>
         </div>

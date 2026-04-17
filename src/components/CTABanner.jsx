@@ -42,20 +42,43 @@ export function CTABanner({
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           style={inView ? { animation: 'fadeUp 0.7s ease-out 0.2s both' } : { opacity: 0 }}
         >
-          <Link
-            to={primaryCta.href}
-            className="group inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-teal-700 font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-black/10 hover:-translate-y-0.5 text-sm"
-          >
-            {primaryCta.label}
-            <Icons.ChevronRight cls="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          {secondaryCta && (
-            <Link
-              to={secondaryCta.href}
-              className="text-white/80 hover:text-white font-medium text-sm transition-colors underline underline-offset-4"
+          {primaryCta.href.startsWith('http') ? (
+            <a
+              href={primaryCta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-teal-700 font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-black/10 hover:-translate-y-0.5 text-sm"
             >
-              {secondaryCta.label}
+              {primaryCta.label}
+              <Icons.ChevronRight cls="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          ) : (
+            <Link
+              to={primaryCta.href}
+              className="group inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-teal-700 font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-black/10 hover:-translate-y-0.5 text-sm"
+            >
+              {primaryCta.label}
+              <Icons.ChevronRight cls="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
+          )}
+          {secondaryCta && (
+            secondaryCta.href.startsWith('http') ? (
+              <a
+                href={secondaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white font-medium text-sm transition-colors underline underline-offset-4"
+              >
+                {secondaryCta.label}
+              </a>
+            ) : (
+              <Link
+                to={secondaryCta.href}
+                className="text-white/80 hover:text-white font-medium text-sm transition-colors underline underline-offset-4"
+              >
+                {secondaryCta.label}
+              </Link>
+            )
           )}
         </div>
       </div>

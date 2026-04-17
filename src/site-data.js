@@ -67,6 +67,11 @@ export const seo = {
     description: 'meDDI AI terms of service — the rules and guidelines for using our platform.',
     canonical: 'https://meddiai.com/terms',
   },
+  download: {
+    title: 'Download meDDI AI — Free Android App',
+    description: 'Download the meDDI AI prescription scanner app for Android. Includes APK, user manual, and demo video.',
+    canonical: 'https://meddiai.com/download',
+  },
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -78,6 +83,7 @@ export const navigation = {
     { label: 'Team', href: '/team' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Download', href: '/download' },
   ],
   cta: { label: 'Request Demo', href: '/contact' },
 }
