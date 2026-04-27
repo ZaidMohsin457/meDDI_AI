@@ -440,8 +440,8 @@ export const team = {
   members: [
     // ── Founding Team ──────────────────────────────
     {
-      name: 'Dr. Ahmar Rashid',
-      role: 'Founder & CEO',
+      name: 'Dr. Ahmar R.',
+      role: 'Chief Executive Officer (CEO)',
       title: 'Full Professor & former Dean, GIK Institute',
       email: 'ahmar.rashid@giki.edu.pk',
       initials: 'AR',
@@ -454,7 +454,7 @@ export const team = {
     },
     {
       name: 'Muhammad Zaid Mohsin',
-      role: 'Co-Founder & CTO',
+      role: 'Chief Technology Officer (CTO)',
       email: 'zaidmohsin45@gmail.com',
       initials: 'ZM',
       color: 'teal',
@@ -466,7 +466,7 @@ export const team = {
     },
     {
       name: 'Haider Ali Khan',
-      role: 'Co-Founder & Product Lead',
+      role: 'Product Lead',
       email: 'haideraleek@gmail.com',
       initials: 'HAK',
       color: 'violet',
@@ -484,7 +484,7 @@ export const team = {
       initials: 'AF',
       color: 'blue',
       photo: '/team/ali.jpeg',
-      group: 'core',
+      group: 'founder',
       bio: "Ali leads meDDI AI's fine-tuning pipelines and data annotation workflows. He drives ML model training for OCR and DDI detection, and handles healthcare AI dataset curation and labeling — directly shaping the accuracy of the system's core capabilities.",
       expertise: ['Fine-tuning Pipelines', 'Data Annotation', 'OCR · DDI Models', 'Dataset Curation'],
       grants: [],
